@@ -7,15 +7,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Modelos;
 
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+        private List<Libro> libros = new List<Libro>();
         public Form1()
         {
+            
+
             InitializeComponent();
+            CargarLibrosInciales();
         }
+
+        private void CargarLibrosInciales()
+        {
+
+            libros.Add(new Libro
+            {
+                ID = 1,
+                Titulo = "",
+                Autor = "",
+                Disponible = true,
+
+            });
+
+        }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -28,8 +48,5 @@ namespace WindowsFormsApp1
         }
     }
 
-    private Libro AgregarLibro(){
-            return null;
 
-        }
 }
