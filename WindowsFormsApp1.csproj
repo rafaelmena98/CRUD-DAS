@@ -49,23 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="moreItems\prestarLibro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="moreItems\prestarLibro.Designer.cs">
-      <DependentUpon>prestarLibro.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logica\GestorBiblioteca.cs" />
+    <Compile Include="Modelos\Libro.cs" />
+    <Compile Include="Modelos\Prestamo.cs" />
+    <Compile Include="Modelos\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="moreItems\prestarLibro.resx">
-      <DependentUpon>prestarLibro.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

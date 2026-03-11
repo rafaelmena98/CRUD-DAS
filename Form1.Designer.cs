@@ -30,16 +30,19 @@
         {
             this.btnDevolver = new System.Windows.Forms.Button();
             this.barBusqueda = new System.Windows.Forms.TextBox();
-            this.selecPanel = new System.Windows.Forms.Panel();
-            this.barScroll = new System.Windows.Forms.VScrollBar();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.selecPanel.SuspendLayout();
+            this.dgvLibros = new System.Windows.Forms.DataGridView();
+            this.columnaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnaTitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnaAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnaEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDevolver
             // 
-            this.btnDevolver.Location = new System.Drawing.Point(245, 401);
+            this.btnDevolver.Location = new System.Drawing.Point(43, 401);
             this.btnDevolver.Name = "btnDevolver";
             this.btnDevolver.Size = new System.Drawing.Size(199, 34);
             this.btnDevolver.TabIndex = 1;
@@ -48,7 +51,7 @@
             // 
             // barBusqueda
             // 
-            this.barBusqueda.Location = new System.Drawing.Point(279, 12);
+            this.barBusqueda.Location = new System.Drawing.Point(242, 12);
             this.barBusqueda.Name = "barBusqueda";
             this.barBusqueda.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.barBusqueda.Size = new System.Drawing.Size(334, 20);
@@ -56,24 +59,9 @@
             this.barBusqueda.Text = "Ingrese su busqueda...";
             this.barBusqueda.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // selecPanel
-            // 
-            this.selecPanel.Controls.Add(this.barScroll);
-            this.selecPanel.Location = new System.Drawing.Point(12, 12);
-            this.selecPanel.Name = "selecPanel";
-            this.selecPanel.Size = new System.Drawing.Size(216, 423);
-            this.selecPanel.TabIndex = 3;
-            // 
-            // barScroll
-            // 
-            this.barScroll.Location = new System.Drawing.Point(192, 0);
-            this.barScroll.Name = "barScroll";
-            this.barScroll.Size = new System.Drawing.Size(24, 423);
-            this.barScroll.TabIndex = 0;
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(655, 407);
+            this.button1.Location = new System.Drawing.Point(623, 407);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(108, 23);
             this.button1.TabIndex = 4;
@@ -82,12 +70,46 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(450, 401);
+            this.button2.Location = new System.Drawing.Point(310, 401);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(199, 34);
             this.button2.TabIndex = 5;
             this.button2.Text = "Agregar Libro";
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dgvLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.columnaID,
+            this.columnaTitulo,
+            this.columnaAutor,
+            this.columnaEstado});
+            this.dgvLibros.Location = new System.Drawing.Point(15, 74);
+            this.dgvLibros.Name = "dataGridView1";
+            this.dgvLibros.Size = new System.Drawing.Size(773, 310);
+            this.dgvLibros.TabIndex = 6;
+            this.dgvLibros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // columnaID
+            // 
+            this.columnaID.HeaderText = "Id";
+            this.columnaID.Name = "columnaID";
+            // 
+            // columnaTitulo
+            // 
+            this.columnaTitulo.HeaderText = "Titulo";
+            this.columnaTitulo.Name = "columnaTitulo";
+            // 
+            // columnaAutor
+            // 
+            this.columnaAutor.HeaderText = "Autor";
+            this.columnaAutor.Name = "columnaAutor";
+            // 
+            // columnaEstado
+            // 
+            this.columnaEstado.HeaderText = "Estado";
+            this.columnaEstado.Name = "columnaEstado";
             // 
             // Form1
             // 
@@ -95,16 +117,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvLibros);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.selecPanel);
             this.Controls.Add(this.barBusqueda);
             this.Controls.Add(this.btnDevolver);
             this.HelpButton = true;
             this.Name = "Form1";
             this.ShowIcon = false;
             this.Text = "LibreriaApp";
-            this.selecPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,10 +137,13 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnDevolver;
         private System.Windows.Forms.TextBox barBusqueda;
-        private System.Windows.Forms.Panel selecPanel;
-        private System.Windows.Forms.VScrollBar barScroll;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dgvLibros;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnaID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnaTitulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnaAutor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnaEstado;
     }
 }
 
