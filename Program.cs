@@ -4,24 +4,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace libreria
+
+namespace WindowsFormsApp1
 {
- // Creamos nuestra clase "Libro".
-    class libro
+    static class Program
     {
-        string autor = "Paulo Coelho";
-        string estudiante = "Rafael Mena";
-        string carnet = "MM253045";
-        int cantidad = 0;
-
-        static void Main(string[] args)
+        [STAThread]
+        static void Main()
         {
-            libro obj = new libro();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
         }
-
-        
     }
-
-    
-
 }
