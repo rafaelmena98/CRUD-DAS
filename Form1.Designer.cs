@@ -31,7 +31,7 @@
             this.btnDevolver = new System.Windows.Forms.Button();
             this.barBusqueda = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.botonAgregar = new System.Windows.Forms.Button();
             this.dgvLibros = new System.Windows.Forms.DataGridView();
             this.columnaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnaTitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,14 +70,15 @@
             this.button1.Text = "Nueva Busqueda";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // botonAgregar
             // 
-            this.button2.Location = new System.Drawing.Point(220, 407);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(199, 34);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Agregar Libro";
-            this.button2.UseVisualStyleBackColor = true;
+            this.botonAgregar.Location = new System.Drawing.Point(220, 407);
+            this.botonAgregar.Name = "botonAgregar";
+            this.botonAgregar.Size = new System.Drawing.Size(199, 34);
+            this.botonAgregar.TabIndex = 5;
+            this.botonAgregar.Text = "Agregar Libro";
+            this.botonAgregar.UseVisualStyleBackColor = true;
+            this.botonAgregar.Click += new System.EventHandler(this.botonAgregar_Click);
             // 
             // dgvLibros
             // 
@@ -138,7 +139,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dgvLibros);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.botonAgregar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.barBusqueda);
             this.Controls.Add(this.btnDevolver);
@@ -158,7 +159,7 @@
         private System.Windows.Forms.Button btnDevolver;
         private System.Windows.Forms.TextBox barBusqueda;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button botonAgregar;
         private System.Windows.Forms.DataGridView dgvLibros;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnaID;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnaTitulo;

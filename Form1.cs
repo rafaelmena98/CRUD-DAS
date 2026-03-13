@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -119,8 +120,24 @@ namespace WindowsFormsApp1
             MessageBox.Show("Libro devuelto correctamente");
         }
 
-        
+        private void botonAgregar_Click(object sender, EventArgs e)
+        {
+            FrmAgregarLibro frm = new FrmAgregarLibro();
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                Libro nuevoLibro = frm.NuevoLibro;
+                if (libros.Any(l => l.ID == nuevoLibro.ID))
+                { 
+                 
+                    MessageBox.Show("Ya existe un libro con ese ID");
+                        return;
+                }
 
+                libros.Add(nuevoLibro);
+                MostrarLibros();
+                MessageBox.Show("Libro agregado correctamente");
+            }
+        }
     }       
 
 
