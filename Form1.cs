@@ -89,7 +89,39 @@ namespace WindowsFormsApp1
         {
 
         }
-    }
+
+        private void btnDevolver_Click(object sender, EventArgs e)
+        {
+            if (dgvLibros.SelectedRows.Count == 0)
+            { 
+                MessageBox.Show("Seleccione un libro");
+                return;
+            }
+
+            int idLibro = Convert.ToInt32(dgvLibros.SelectedRows[0].Cells[0].Value);
+            Libro libroEncontrado = libros.Find(libro => libro.ID == idLibro);
+
+            if (libroEncontrado == null)
+            {
+                MessageBox.Show("No se pudo encontrar el libro");
+                return;
+            }
+
+            if (libroEncontrado.Disponible)
+            {
+                MessageBox.Show("Este libro esta disponible!");
+                return;
+            }
+
+            libroEncontrado.Disponible = true;
+            MostrarLibros();
+
+            MessageBox.Show("Libro devuelto correctamente");
+        }
+
+        
+
+    }       
 
 
 }
