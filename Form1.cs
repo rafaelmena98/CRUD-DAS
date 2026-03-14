@@ -51,7 +51,7 @@ namespace WindowsFormsApp1
                 ID = 3,
                 Titulo = "El viejo y el mar",
                 Autor = "Ernest Hemingway",
-                Disponible= false,
+                Disponible= true,
             });
 
         }
@@ -116,10 +116,20 @@ namespace WindowsFormsApp1
                 return;
             }
 
-            libroEncontrado.Disponible = true;
-            MostrarLibros();
+            Prestamo prestamoActivo = prestamos.Find(p => p.LibroPrestado.ID == idLibro && p.Devuelto == false );
+            if (prestamoActivo == null)
+            {
+                MessageBox.Show("No se encontro un prestamo activo para este libro");
+                return;
+            }
 
+            prestamoActivo.Devuelto = true;
+            libroEncontrado.Disponible = true;
+
+            MostrarLibros();
             MessageBox.Show("Libro devuelto correctamente");
+
+
         }
 
         private void botonAgregar_Click(object sender, EventArgs e)

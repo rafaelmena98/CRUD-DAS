@@ -7,10 +7,14 @@ using WindowsFormsApp1.Modelos;
 
 namespace WindowsFormsApp1.Modelos
 {
-    public class Usuario
+    public class Usuario : Persona
     {
         public string Carnet { get; set; }
-        public string Nombre { get; set; }
-        public string Email { get; set; }
+
+        public override string MostrarInformacion()
+        {
+              return Carnet + " - " + Nombre + " - " + Email;
+        }
+
     }
 }

@@ -69,6 +69,7 @@
     </Compile>
     <Compile Include="Logica\GestorBiblioteca.cs" />
     <Compile Include="Modelos\Libro.cs" />
+    <Compile Include="Modelos\Persona.cs" />
     <Compile Include="Modelos\Prestamo.cs" />
     <Compile Include="Modelos\Usuario.cs" />
     <Compile Include="Program.cs" />
