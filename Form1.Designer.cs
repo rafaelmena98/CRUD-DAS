@@ -38,6 +38,7 @@
             this.columnaAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnaEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnPrestar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +46,7 @@
             // 
             this.btnDevolver.Location = new System.Drawing.Point(15, 407);
             this.btnDevolver.Name = "btnDevolver";
-            this.btnDevolver.Size = new System.Drawing.Size(199, 34);
+            this.btnDevolver.Size = new System.Drawing.Size(143, 34);
             this.btnDevolver.TabIndex = 1;
             this.btnDevolver.Text = "Devolver Libro";
             this.btnDevolver.UseVisualStyleBackColor = true;
@@ -72,9 +73,9 @@
             // 
             // botonAgregar
             // 
-            this.botonAgregar.Location = new System.Drawing.Point(220, 407);
+            this.botonAgregar.Location = new System.Drawing.Point(164, 407);
             this.botonAgregar.Name = "botonAgregar";
-            this.botonAgregar.Size = new System.Drawing.Size(199, 34);
+            this.botonAgregar.Size = new System.Drawing.Size(143, 34);
             this.botonAgregar.TabIndex = 5;
             this.botonAgregar.Text = "Agregar Libro";
             this.botonAgregar.UseVisualStyleBackColor = true;
@@ -124,13 +125,23 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(425, 407);
+            this.btnEliminar.Location = new System.Drawing.Point(313, 407);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(199, 34);
+            this.btnEliminar.Size = new System.Drawing.Size(143, 34);
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar Libro";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnPrestar
+            // 
+            this.btnPrestar.Location = new System.Drawing.Point(462, 407);
+            this.btnPrestar.Name = "btnPrestar";
+            this.btnPrestar.Size = new System.Drawing.Size(143, 34);
+            this.btnPrestar.TabIndex = 8;
+            this.btnPrestar.Text = "Prestar Libro";
+            this.btnPrestar.UseVisualStyleBackColor = true;
+            this.btnPrestar.Click += new System.EventHandler(this.btnPrestar_Click);
             // 
             // Form1
             // 
@@ -138,6 +149,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnPrestar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dgvLibros);
             this.Controls.Add(this.botonAgregar);
@@ -167,6 +179,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn columnaAutor;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnaEstado;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnPrestar;
     }
 }
 

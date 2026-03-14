@@ -50,6 +50,7 @@
             this.textTitulo.Name = "textTitulo";
             this.textTitulo.Size = new System.Drawing.Size(180, 20);
             this.textTitulo.TabIndex = 1;
+            this.textTitulo.Text = "Agrega el titulo";
             // 
             // textAutor
             // 
@@ -57,6 +58,7 @@
             this.textAutor.Name = "textAutor";
             this.textAutor.Size = new System.Drawing.Size(180, 20);
             this.textAutor.TabIndex = 2;
+            this.textAutor.Text = "Agrega el autor";
             // 
             // botonCancelar
             // 

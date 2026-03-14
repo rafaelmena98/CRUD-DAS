@@ -15,6 +15,8 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
         private List<Libro> libros = new List<Libro>();
+        private List<Usuario> usuarios = new List<Usuario>();
+        private List<Prestamo> prestamos = new List<Prestamo>();
         public Form1()
         {
             
@@ -158,6 +160,62 @@ namespace WindowsFormsApp1
             libros.Remove(libroEncontrado);
             MostrarLibros();
             MessageBox.Show("Libro eliminado correctamente");
+        }
+
+        private void btnPrestar_Click(object sender, EventArgs e)
+        {
+            if (dgvLibros.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Seleccione un libro para prestar");
+                return;
+            }
+
+            int idLibro = Convert.ToInt32(dgvLibros.SelectedRows [0].Cells[0].Value);
+            Libro libroEncontrado = libros.Find(libro => libro.ID == idLibro);
+
+            if (libroEncontrado == null)
+            {
+                MessageBox.Show("Libro no encontrado");
+                return;
+            }
+            if (!libroEncontrado.Disponible)
+            {
+                MessageBox.Show("Este libro esta prestado");
+                return;
+            }
+
+            FrmPrestamos frm = new FrmPrestamos();
+
+
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                Usuario usuarioIngresado = frm.UsuarioPrestamo;
+                Usuario usuarioExistente = usuarios.Find(u => u.Carnet == usuarioIngresado.Carnet);
+
+                if (usuarioExistente == null)
+                {
+                    usuarios.Add(usuarioIngresado);
+                    usuarioExistente = usuarioIngresado;
+                }
+
+                Prestamo nuevoPrestamo = new Prestamo
+                {
+                    IdPrestamo = prestamos.Count + 1,
+                    LibroPrestado = libroEncontrado,
+                    UsuarioPrestamo = usuarioExistente,
+                    FechaPrestamo = DateTime.Now,
+                    Devuelto = false
+                };
+
+                prestamos.Add(nuevoPrestamo);
+                libroEncontrado.Disponible = false;
+                MostrarLibros();
+
+                MessageBox.Show("Prestamo registrado correctamente!");
+            }
+
+
+
         }
     }       
 
