@@ -138,6 +138,27 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Libro agregado correctamente");
             }
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvLibros.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Seleccione un libro para eliminar");
+                return;
+            }
+
+            int idlibro = Convert.ToInt32(dgvLibros.SelectedRows[0].Cells[0].Value);
+            Libro libroEncontrado = libros.Find(libro => libro.ID == idlibro);
+
+            if (libroEncontrado == null)
+            {
+                MessageBox.Show("Libro no encontrado");
+                return;
+            }
+            libros.Remove(libroEncontrado);
+            MostrarLibros();
+            MessageBox.Show("Libro eliminado correctamente");
+        }
     }       
 
 

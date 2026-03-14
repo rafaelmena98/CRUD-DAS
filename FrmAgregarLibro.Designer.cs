@@ -41,6 +41,7 @@
             this.textID.Name = "textID";
             this.textID.Size = new System.Drawing.Size(180, 20);
             this.textID.TabIndex = 0;
+            this.textID.Text = "ID del libro";
             this.textID.TextChanged += new System.EventHandler(this.textID_TextChanged);
             // 
             // textTitulo

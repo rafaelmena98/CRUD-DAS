@@ -37,7 +37,7 @@
             this.columnaTitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnaAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnaEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,14 +122,15 @@
             this.columnaEstado.Name = "columnaEstado";
             this.columnaEstado.ReadOnly = true;
             // 
-            // button3
+            // btnEliminar
             // 
-            this.button3.Location = new System.Drawing.Point(425, 407);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(199, 34);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Eliminar Libro";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnEliminar.Location = new System.Drawing.Point(425, 407);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(199, 34);
+            this.btnEliminar.TabIndex = 7;
+            this.btnEliminar.Text = "Eliminar Libro";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // Form1
             // 
@@ -137,7 +138,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dgvLibros);
             this.Controls.Add(this.botonAgregar);
             this.Controls.Add(this.button1);
@@ -165,7 +166,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn columnaTitulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnaAutor;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnaEstado;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }
 
