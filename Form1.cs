@@ -227,6 +227,12 @@ namespace WindowsFormsApp1
 
 
         }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            FrmUsuariosEstadisticas frm = new FrmUsuariosEstadisticas(usuarios, prestamos);
+            frm.ShowDialog();
+        }
     }       
 
 

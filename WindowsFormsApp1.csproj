@@ -38,6 +38,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +55,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuariosEstadisticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuariosEstadisticas.Designer.cs">
+      <DependentUpon>FrmUsuariosEstadisticas.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPrestamos.cs">
       <SubType>Form</SubType>
@@ -76,6 +83,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuariosEstadisticas.resx">
+      <DependentUpon>FrmUsuariosEstadisticas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrestamos.resx">
       <DependentUpon>FrmPrestamos.cs</DependentUpon>

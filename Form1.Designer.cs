@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             this.btnDevolver = new System.Windows.Forms.Button();
-            this.barBusqueda = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnUsuarios = new System.Windows.Forms.Button();
             this.botonAgregar = new System.Windows.Forms.Button();
             this.dgvLibros = new System.Windows.Forms.DataGridView();
             this.columnaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,24 +51,15 @@
             this.btnDevolver.UseVisualStyleBackColor = true;
             this.btnDevolver.Click += new System.EventHandler(this.btnDevolver_Click);
             // 
-            // barBusqueda
+            // btnUsuarios
             // 
-            this.barBusqueda.Location = new System.Drawing.Point(242, 12);
-            this.barBusqueda.Name = "barBusqueda";
-            this.barBusqueda.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.barBusqueda.Size = new System.Drawing.Size(334, 20);
-            this.barBusqueda.TabIndex = 2;
-            this.barBusqueda.Text = "Ingrese su busqueda...";
-            this.barBusqueda.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(643, 413);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Nueva Busqueda";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Location = new System.Drawing.Point(643, 413);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(108, 23);
+            this.btnUsuarios.TabIndex = 4;
+            this.btnUsuarios.Text = "Usuarios";
+            this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // botonAgregar
             // 
@@ -153,8 +143,7 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dgvLibros);
             this.Controls.Add(this.botonAgregar);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.barBusqueda);
+            this.Controls.Add(this.btnUsuarios);
             this.Controls.Add(this.btnDevolver);
             this.HelpButton = true;
             this.Name = "Form1";
@@ -162,7 +151,6 @@
             this.Text = "LibreriaApp";
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -170,8 +158,7 @@
 
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnDevolver;
-        private System.Windows.Forms.TextBox barBusqueda;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Button botonAgregar;
         private System.Windows.Forms.DataGridView dgvLibros;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnaID;
