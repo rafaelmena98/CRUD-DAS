@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.labelRegistros = new System.Windows.Forms.Label();
             this.labelChart = new System.Windows.Forms.Label();
             this.chartLibros = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -65,14 +63,8 @@
             // 
             chartArea2.Name = "ChartArea1";
             this.chartLibros.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartLibros.Legends.Add(legend2);
             this.chartLibros.Location = new System.Drawing.Point(598, 42);
             this.chartLibros.Name = "chartLibros";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartLibros.Series.Add(series2);
             this.chartLibros.Size = new System.Drawing.Size(437, 300);
             this.chartLibros.TabIndex = 2;
             this.chartLibros.Text = "chart1";

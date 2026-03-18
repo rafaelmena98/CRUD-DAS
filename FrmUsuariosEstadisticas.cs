@@ -41,13 +41,19 @@ namespace WindowsFormsApp1
             chartLibros.Series.Clear();
             chartLibros.ChartAreas.Clear();
             chartLibros.Titles.Clear();
+            chartLibros.Legends.Clear();
 
             ChartArea area = new ChartArea();
             chartLibros.ChartAreas.Add(area);
 
+            Legend legend = new Legend("LegendPrincipal");
+            chartLibros.Legends.Add(legend);
+
             chartLibros.Titles.Add("Los libros mas prestados");
-            Series serie  = new Series();
+
+            Series serie = chartLibros.Series.Add("Prestamos");
             serie.ChartType = SeriesChartType.Column;
+            serie.Legend = "LegendPrincipal";
 
             Dictionary<string, int> conteoLibros = new Dictionary<string, int>();
 
@@ -63,13 +69,11 @@ namespace WindowsFormsApp1
                     conteoLibros [tituloLibro] = 1;
                 }
 
+            foreach (var item in conteoLibros)
+                    {
 
-                foreach (var item in conteoLibros)
-                {
-                    serie.Points.AddXY(item.Key, item.Value);
-                }
-
-                chartLibros.Series.Add(serie);
+                        serie.Points.AddXY(item.Key, item.Value);
+                    }
 
             }
         }
